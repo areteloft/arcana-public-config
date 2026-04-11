@@ -1,8 +1,8 @@
 {
   "app": {
-    "latest_version": "0.3.0",
+    "latest_version": "0.1.0",
     "recommended_version": "0.2.0",
-    "minimum_supported_version": "0.1.0",
+    "minimum_supported_version": "0.2.0",
     "store_url_android": "https://play.google.com/store/apps/details?id=com.areteloft.cafearcana",
     "store_url_ios": ""
   },

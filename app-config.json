@@ -8,7 +8,7 @@
   },
   "notice": {
     "id": "notice_20260408_launch",
-    "kr": {
+    "ko": {
       "title": "알림",
       "message": "새 버전이 배포되었습니다."
     },
@@ -19,7 +19,7 @@
   },
   "maintenance": {
     "enabled": true,
-    "kr": {
+    "ko": {
       "title": "점검 안내",
       "message": "잠시 후 다시 이용해 주세요."
     },

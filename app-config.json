@@ -6,17 +6,32 @@
     "store_url_android": "https://play.google.com/store/apps/details?id=com.areteloft.cafearcana",
     "store_url_ios": ""
   },
-  "notice": {
-    "id": "notice_20260408_launch",
-    "ko": {
-      "title": "알림",
-      "message": "새 버전이 배포되었습니다."
+  "notices": [
+    {
+      "id": "notice_20260408_launch",
+      "enabled": true,
+      "ko": {
+        "title": "알림",
+        "message": "새 버전이 배포되었습니다."
+      },
+      "en": {
+        "title": "Notice",
+        "message": "A new version has been released."
+      }
     },
-    "en": {
-      "title": "Notice",
-      "message": "A new version has been released."
+    {
+      "id": "notice_20260413_event",
+      "enabled": false,
+      "ko": {
+        "title": "이벤트 안내",
+        "message": "특별한 소식이 준비 중입니다."
+      },
+      "en": {
+        "title": "Event Notice",
+        "message": "Something special is coming soon."
+      }
     }
-  },
+  ],
   "maintenance": {
     "enabled": false,
     "ko": {

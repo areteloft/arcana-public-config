@@ -11,24 +11,24 @@
       "id": "notice_20260408_launch",
       "enabled": true,
       "ko": {
-        "title": "알림",
-        "message": "새 버전이 배포되었습니다."
+        "title": "테스트 버전 안내",
+        "message": "본 앱은 현재 비공개 테스트 진행 중입니다."
       },
       "en": {
-        "title": "Notice",
-        "message": "A new version has been released."
+        "title": "Beta Test Notice",
+        "message": "This app is currently in closed beta testing."
       }
     },
     {
       "id": "notice_20260413_event",
       "enabled": false,
       "ko": {
-        "title": "이벤트 안내",
-        "message": "특별한 소식이 준비 중입니다."
+        "title": "베타 버전 안내",
+        "message": "타로 해석은 현재 하루 3건까지 제공됩니다."
       },
       "en": {
-        "title": "Event Notice",
-        "message": "Something special is coming soon."
+        "title": "Beta Version Notice",
+        "message": "Tarot readings are currently available up to 3 times per day."
       }
     }
   ],

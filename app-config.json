@@ -21,7 +21,7 @@
     },
     {
       "id": "notice_20260413_event",
-      "enabled": false,
+      "enabled": true,
       "ko": {
         "title": "베타 버전 안내",
         "message": "타로 해석은 현재 하루 3건까지 제공됩니다."

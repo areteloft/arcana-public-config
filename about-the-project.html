@@ -3,447 +3,194 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Arcana — Indie Tarot Project</title>
+  <title>About the Project</title>
   <style>
     :root {
-      --bg: #111214;
-      --panel: #17191d;
-      --panel-2: #1d2026;
-      --text: #f3f0ea;
-      --muted: #b8b1a6;
-      --line: rgba(255,255,255,0.08);
-      --accent: #d6b07c;
-      --accent-soft: rgba(214,176,124,0.12);
-      --shadow: 0 18px 40px rgba(0,0,0,0.35);
-      --radius: 24px;
-      --max: 1100px;
+      --bg: #f7f4ee;
+      --paper: #fffdf9;
+      --text: #2e2a26;
+      --muted: #6f675f;
+      --line: #e6dfd5;
+      --accent: #7a5f47;
+      --max: 760px;
     }
 
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+
     body {
       margin: 0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background:
-        radial-gradient(circle at top, rgba(214,176,124,0.10), transparent 30%),
-        linear-gradient(180deg, #0d0e10 0%, #111214 100%);
+      font-family: Georgia, "Times New Roman", serif;
+      background: var(--bg);
       color: var(--text);
-      line-height: 1.65;
+      line-height: 1.75;
     }
 
     a {
-      color: inherit;
+      color: var(--accent);
       text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
 
     .wrap {
       width: min(var(--max), calc(100% - 32px));
       margin: 0 auto;
+      padding: 56px 0 72px;
     }
 
-    .hero {
-      padding: 84px 0 48px;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 12px;
-      border-radius: 999px;
+    .page {
+      background: var(--paper);
       border: 1px solid var(--line);
-      background: rgba(255,255,255,0.03);
-      color: var(--muted);
-      font-size: 13px;
-      letter-spacing: 0.02em;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 28px;
-      align-items: stretch;
-      margin-top: 20px;
-    }
-
-    .card {
-      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015));
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(8px);
-    }
-
-    .hero-copy {
-      padding: 38px;
+      padding: 40px 28px;
     }
 
     h1 {
-      margin: 16px 0 16px;
-      font-size: clamp(38px, 6vw, 66px);
-      line-height: 1.02;
-      letter-spacing: -0.04em;
-    }
-
-    .lead {
-      margin: 0;
-      font-size: 18px;
-      color: var(--muted);
-      max-width: 56ch;
-    }
-
-    .buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 28px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 48px;
-      padding: 0 18px;
-      border-radius: 999px;
-      border: 1px solid var(--line);
-      font-weight: 600;
-      transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
-    }
-
-    .btn:hover {
-      transform: translateY(-1px);
-      border-color: rgba(214,176,124,0.4);
-    }
-
-    .btn-primary {
-      background: linear-gradient(180deg, #d6b07c 0%, #b9925f 100%);
-      color: #161616;
-      border-color: transparent;
-    }
-
-    .btn-secondary {
-      background: rgba(255,255,255,0.03);
-      color: var(--text);
-    }
-
-    .hero-side {
-      padding: 28px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      background: linear-gradient(180deg, rgba(214,176,124,0.12), rgba(255,255,255,0.02));
-    }
-
-    .mini-label {
-      color: var(--muted);
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    .quote {
-      margin: 18px 0 24px;
-      font-size: 24px;
-      line-height: 1.35;
-      letter-spacing: -0.02em;
-    }
-
-    .stack {
-      display: grid;
-      gap: 12px;
-    }
-
-    .pill {
-      padding: 14px 16px;
-      border-radius: 18px;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid var(--line);
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    section {
-      padding: 24px 0 0;
-    }
-
-    .section-head {
-      margin-bottom: 20px;
-    }
-
-    .section-head h2 {
       margin: 0 0 8px;
-      font-size: clamp(28px, 4vw, 42px);
-      letter-spacing: -0.03em;
+      font-size: 34px;
+      font-weight: 400;
+      line-height: 1.2;
     }
 
-    .section-head p {
-      margin: 0;
+    .sub {
+      margin: 0 0 28px;
       color: var(--muted);
-      max-width: 65ch;
+      font-size: 15px;
     }
 
-    .grid-2 {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-    }
-
-    .panel {
-      padding: 28px;
-    }
-
-    .panel h3 {
-      margin: 0 0 12px;
+    h2 {
+      margin: 34px 0 10px;
       font-size: 22px;
-      letter-spacing: -0.02em;
+      font-weight: 400;
+      line-height: 1.3;
     }
 
-    .panel p {
-      margin: 0;
-      color: var(--muted);
-    }
-
-    .bullets {
-      display: grid;
-      gap: 12px;
-      margin-top: 18px;
-    }
-
-    .bullet {
-      display: grid;
-      grid-template-columns: 24px 1fr;
-      gap: 12px;
-      align-items: start;
-      color: var(--muted);
-    }
-
-    .bullet-dot {
-      width: 24px;
-      height: 24px;
-      border-radius: 999px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--accent-soft);
-      color: var(--accent);
-      font-size: 13px;
-      font-weight: 700;
-      border: 1px solid rgba(214,176,124,0.18);
+    p {
+      margin: 0 0 16px;
+      font-size: 17px;
     }
 
     .shots {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-      margin-top: 20px;
+      gap: 14px;
+      margin-top: 18px;
     }
 
     .shot {
-      overflow: hidden;
-      min-height: 360px;
-      position: relative;
-      background: linear-gradient(180deg, #181b20, #0f1115);
-    }
-
-    .shot img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .shot-placeholder {
-      position: absolute;
-      inset: 0;
+      border: 1px solid var(--line);
+      background: #f2ede5;
+      min-height: 220px;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 24px;
+      padding: 20px;
       color: var(--muted);
-      font-size: 14px;
-      background:
-        linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015)),
-        radial-gradient(circle at top, rgba(214,176,124,0.12), transparent 45%);
+      font-size: 15px;
     }
 
-    .shot-tag {
-      position: absolute;
-      left: 14px;
-      bottom: 14px;
-      z-index: 1;
-      padding: 8px 10px;
-      border-radius: 999px;
-      background: rgba(0,0,0,0.42);
-      border: 1px solid rgba(255,255,255,0.1);
-      font-size: 12px;
-      color: #f6f2ea;
+    .shot img {
+      display: block;
+      width: 100%;
+      height: auto;
     }
 
-    .cta {
-      margin: 28px 0 72px;
-      padding: 34px;
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 24px;
-      align-items: center;
+    .box {
+      border: 1px solid var(--line);
+      padding: 18px 16px;
+      background: #fcfaf6;
+      margin-top: 12px;
     }
 
-    .cta h3 {
-      margin: 0 0 12px;
-      font-size: clamp(24px, 4vw, 36px);
-      letter-spacing: -0.03em;
-    }
-
-    .cta p {
-      margin: 0;
+    .small {
       color: var(--muted);
-      max-width: 56ch;
+      font-size: 15px;
     }
 
-    .note {
-      margin-top: 14px;
-      color: var(--muted);
-      font-size: 14px;
+    ul {
+      margin: 10px 0 16px 20px;
+      padding: 0;
     }
 
-    footer {
-      padding: 0 0 56px;
-      color: #928b82;
-      font-size: 14px;
+    li {
+      margin-bottom: 8px;
+      font-size: 16px;
     }
 
-    @media (max-width: 920px) {
-      .hero-grid,
-      .grid-2,
-      .cta,
-      .shots {
-        grid-template-columns: 1fr;
+    @media (max-width: 640px) {
+      .wrap {
+        width: min(var(--max), calc(100% - 20px));
+        padding: 28px 0 40px;
       }
 
-      .shot {
-        min-height: 300px;
+      .page {
+        padding: 28px 18px;
       }
 
-      .hero-copy,
-      .hero-side,
-      .panel,
-      .cta {
-        padding: 24px;
+      h1 {
+        font-size: 28px;
+      }
+
+      p, li {
+        font-size: 16px;
       }
     }
   </style>
 </head>
 <body>
   <main class="wrap">
-    <section class="hero">
-      <span class="eyebrow">Indie tarot project · Early testing</span>
-      <div class="hero-grid">
-        <div class="card hero-copy">
-          <h1>Translating a personal tarot reading style into a digital experience.</h1>
-          <p class="lead">
-            This is a small indie project built around one question: can a tarot experience still feel personal, immersive, and reflective in a digital format?
-            I wanted to bring my own way of reading into an app with a tactile card-drawing flow, a quiet atmosphere, and a distinct world of its own.
-          </p>
-          <div class="buttons">
-            <a class="btn btn-primary" href="#test">Join closed testing</a>
-            <a class="btn btn-secondary" href="#screens">See screenshots</a>
-          </div>
-        </div>
-        <div class="card hero-side">
-          <div>
-            <div class="mini-label">What I’m trying to build</div>
-            <p class="quote">
-              Not just instant answers, but the feeling of drawing cards by hand, stepping into a mood, and staying with a reading long enough for it to mean something.
-            </p>
-          </div>
-          <div class="stack">
-            <div class="pill">Direct card-drawing interaction</div>
-            <div class="pill">A distinct, immersive tarot world</div>
-            <div class="pill">Reflective reading tone over generic output</div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <article class="page">
+      <h1>About the Project</h1>
+      <p class="sub">A small indie tarot project.</p>
 
-    <section>
-      <div class="section-head">
-        <h2>About the project</h2>
-        <p>
-          The app is built around the experience itself: writing a question, drawing cards directly, and receiving a reading inside a mood-driven world rather than a flat utility screen.
-        </p>
-      </div>
-      <div class="grid-2">
-        <div class="card panel">
-          <h3>Why I started this</h3>
-          <p>
-            I wanted to see whether a reading style that feels personal on paper could be carried into a digital format without losing its tone. That meant focusing not only on interpretation, but also on atmosphere, pacing, and the act of drawing the cards itself.
-          </p>
-        </div>
-        <div class="card panel">
-          <h3>What matters most</h3>
-          <div class="bullets">
-            <div class="bullet"><span class="bullet-dot">1</span><span>A card-drawing UI that feels intentional, not mechanical.</span></div>
-            <div class="bullet"><span class="bullet-dot">2</span><span>An immersive setting with its own mood and internal logic.</span></div>
-            <div class="bullet"><span class="bullet-dot">3</span><span>Readings that feel reflective and coherent rather than generic.</span></div>
-          </div>
-        </div>
-      </div>
-    </section>
+      <p>
+        I have my own style of tarot reading and interpretation, and this project started from a simple question: how much of that can be translated into a digital format without losing the feeling of it?
+      </p>
+      <p>
+        What I wanted was not just a tool that gives instant answers, but something that keeps the act of drawing cards, the atmosphere around the reading, and a quiet sense of immersion.
+      </p>
+      <p>
+        Part of the project has been thinking about how a personal reading style can be expressed digitally, while still feeling intentional rather than mechanical.
+      </p>
 
-    <section id="screens">
-      <div class="section-head">
-        <h2>Screenshots</h2>
-        <p>
-          You can add a few screenshots here to show the atmosphere, the card selection flow, and the result screen.
-        </p>
-      </div>
+      <h2>What I’m trying to make</h2>
+      <p>
+        The focus is on three things: a UI where you directly draw the cards yourself, a distinct world and mood around the reading, and interpretations that feel reflective rather than flat.
+      </p>
+
+      <h2>Screenshots</h2>
+      <p class="small">A few images from the current build.</p>
       <div class="shots">
-        <div class="card shot">
-          <!-- Replace the placeholder with your actual image -->
-          <!-- Example: <img src="images/home.png" alt="App home screen" /> -->
-          <div class="shot-placeholder">Screenshot 1<br />Home / intro mood screen</div>
-          <span class="shot-tag">Mood & world</span>
-        </div>
-        <div class="card shot">
-          <!-- Replace the placeholder with your actual image -->
-          <!-- Example: <img src="images/draw.png" alt="Card drawing screen" /> -->
-          <div class="shot-placeholder">Screenshot 2<br />Card drawing interaction</div>
-          <span class="shot-tag">Draw cards</span>
-        </div>
-        <div class="card shot">
-          <!-- Replace the placeholder with your actual image -->
-          <!-- Example: <img src="images/result.png" alt="Reading result screen" /> -->
-          <div class="shot-placeholder">Screenshot 3<br />Reading / interpretation result</div>
-          <span class="shot-tag">Reading result</span>
-        </div>
+        <div class="shot">Screenshot 1 — Intro or home screen</div>
+        <div class="shot">Screenshot 2 — Card drawing screen</div>
+        <div class="shot">Screenshot 3 — Reading result screen</div>
       </div>
-    </section>
 
-    <section id="test">
-      <div class="card cta">
-        <div>
-          <h3>Interested in testing?</h3>
-          <p>
-            I’m currently looking for a small number of people who would like to join closed testing and try the app early.
-            If you’d like to participate, the easiest option is to submit your Google Play account email through a Google Form so I can add you to the test list.
-          </p>
-          <p class="note">
-            A Google Form is usually better than email for this, since it keeps participation details organized and avoids copy-paste mistakes.
-          </p>
-        </div>
-        <div class="stack">
-          <a class="btn btn-primary" href="YOUR_GOOGLE_FORM_LINK_HERE" target="_blank" rel="noreferrer">Open test signup form</a>
-          <a class="btn btn-secondary" href="mailto:YOUR_EMAIL_HERE">Or email me directly</a>
-          <div class="pill">Suggested form fields: Google Play email, device model, Android version, country, optional feedback notes.</div>
-        </div>
+      <h2>Closed testing</h2>
+      <p>
+        I’m currently looking for a small number of people who might want to try the app during closed testing.
+      </p>
+      <div class="box">
+        <p>
+          If you’d like to join, the easiest way is to fill out a short Google Form with the Google Play account email you use on your Android device.
+        </p>
+        <p>
+          <a href="YOUR_GOOGLE_FORM_LINK_HERE" target="_blank" rel="noreferrer">Open the test signup form</a>
+        </p>
+        <p class="small">
+          If needed, you can also contact me by email: <a href="mailto:YOUR_EMAIL_HERE">YOUR_EMAIL_HERE</a>
+        </p>
       </div>
-    </section>
 
-    <footer>
-      Built as a small indie experiment in tarot, atmosphere, and digital interpretation.
-    </footer>
+      <h2>What the form can ask for</h2>
+      <ul>
+        <li>Your Google Play account email</li>
+        <li>Your device model</li>
+        <li>Your Android version</li>
+        <li>An optional note if you want to share first impressions later</li>
+      </ul>
+    </article>
   </main>
 </body>
 </html>

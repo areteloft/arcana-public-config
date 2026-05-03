@@ -1,7 +1,7 @@
 {
   "app": {
     "latest_version": "0.1.5",
-    "recommended_version": "0.1.0",
+    "recommended_version": "0.1.5",
     "minimum_supported_version": "0.1.0",
     "store_url_android": "https://play.google.com/store/apps/details?id=com.areteloft.cafearcana",
     "store_url_ios": ""
@@ -20,15 +20,15 @@
       }
     },
     {
-      "id": "notice_20260413_event",
+      "id": "notice_20260504",
       "enabled": true,
       "ko": {
         "title": "베타 버전 안내",
-        "message": "타로 해석은 현재 하루 3건까지 제공됩니다."
+        "message": "최신 버전(v0.1.5)에서 하루 편지 획득 제한이 최대 4건으로 변경되었습니다."
       },
       "en": {
         "title": "Beta Version Notice",
-        "message": "Tarot readings are currently available up to 3 times per day."
+        "message": "In the latest version (v0.1.5), the daily letter acquisition limit has been changed to a maximum of 4."
       }
     }
   ],

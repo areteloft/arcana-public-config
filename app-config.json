@@ -1,34 +1,22 @@
 {
   "app": {
-    "latest_version": "0.1.9",
-    "recommended_version": "0.1.9",
-    "minimum_supported_version": "0.1.9",
+    "latest_version": "0.1.11",
+    "recommended_version": "0.1.10",
+    "minimum_supported_version": "0.1.10",
     "store_url_android": "https://play.google.com/store/apps/details?id=com.areteloft.cafearcana",
     "store_url_ios": ""
   },
   "notices": [
     {
-      "id": "notice_20260408_launch",
+      "id": "notice_20260517",
       "enabled": true,
       "ko": {
-        "title": "테스트 버전 안내",
-        "message": "본 앱은 현재 비공개 테스트 진행 중입니다."
+        "title": "베타 버전 출시 안내",
+        "message": "카페 아르카나: 타로 앱이 출시되었습니다.\n하루 최대 3회 광고를 시청하고, 리딩에 사용할 수 있는 편지 재화를 받을 수 있습니다.\n많은 관심 부탁드립니다."
       },
       "en": {
-        "title": "Beta Test Notice",
-        "message": "This app is currently in closed beta testing."
-      }
-    },
-    {
-      "id": "notice_20260504",
-      "enabled": true,
-      "ko": {
-        "title": "베타 버전 안내",
-        "message": "최신 버전(v0.1.5)에서 하루 편지 획득 제한이 최대 4건으로 변경되었습니다."
-      },
-      "en": {
-        "title": "Beta Version Notice",
-        "message": "In the latest version (v0.1.5), the daily letter acquisition limit has been changed to a maximum of 4."
+        "title": "Official Release Notice",
+        "message": "Cafe Arcana: Tarot has been officially released.\nYou can watch ads up to 3 times a day and receive Letter currency to use for readings.\nThank you for your interest."
       }
     }
   ],

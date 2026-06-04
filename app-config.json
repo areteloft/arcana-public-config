@@ -18,6 +18,18 @@
         "title": "Official Release Notice",
         "message": "Cafe Arcana: Tarot has been officially released.\nYou can watch ads up to 3 times a day and receive Letter currency to use for readings.\nThank you for your interest."
       }
+    },
+    {
+      "id": "notice_20260604",
+      "enabled": true,
+      "ko": {
+        "title": "서비스 오류 수정 및 안정화 안내",
+        "message": "앱 이용에 불편을 드려 죄송합니다.\n발생했던 오류 현상이 수정되어 이제 정상적으로 서비스를 이용하실 수 있습니다.\n기다려주셔서 감사합니다."
+      },
+      "en": {
+        "title": "Error Resolution & Stability Update",
+        "message": "We apologize for the inconvenience caused while using the app.\nThe recent errors have been resolved, and the service is now operating normally.\nThank you for your patience."
+      }
     }
   ],
   "maintenance": {
